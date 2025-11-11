@@ -32,6 +32,14 @@ tfms = transforms.Compose([
                          [0.229, 0.224, 0.225]),
 ])
 
+@app.get("/")
+def read_root():
+    return {"message": "hi!"}
+
+@app.get("/api/health")
+def health_check():
+    return {"status": "healthy"}
+
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
     img_bytes = await file.read()

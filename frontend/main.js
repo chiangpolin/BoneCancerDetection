@@ -2,10 +2,11 @@ const imageInput = document.getElementById('imageInput');
 const predictBtn = document.getElementById('predictBtn');
 const preview = document.getElementById('preview');
 const predictionText = document.getElementById('predictionText');
+const percentage = document.getElementById('percentage');
 
 let selectedFile = null;
 
-// 顯示圖片預覽
+// preview image
 imageInput.addEventListener('change', (e) => {
   selectedFile = e.target.files[0];
   if (!selectedFile) return;
@@ -18,7 +19,7 @@ imageInput.addEventListener('change', (e) => {
   reader.readAsDataURL(selectedFile);
 });
 
-// 呼叫後端 API 進行預測
+// call API
 predictBtn.addEventListener('click', async () => {
   if (!selectedFile) {
     alert('Please select an image first!');
@@ -41,7 +42,10 @@ predictBtn.addEventListener('click', async () => {
     }
 
     const data = await response.json();
-    predictionText.textContent = `Prediction: ${data.prediction}, Confidence: ${data.confidence}`;
+    predictionText.textContent = `${data.prediction}`;
+    percentage.textContent = `Confidence: ${
+      data.confidence.toFixed(2) * 100
+    } %`;
   } catch (error) {
     predictionText.textContent = 'Error predicting image.';
     console.error(error);

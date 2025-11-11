@@ -1,0 +1,12 @@
+2025-11-11 14:15:41,636 - INFO - Using device: cpu
+2025-11-11 14:15:41,642 - INFO - Train: 60 | Valid: 20 | Test: 20
+2025-11-11 14:15:48,338 - INFO - Epoch 1/10 | Train Loss: 0.5390 | Val Loss: 0.7466 | Val Acc: 45.00%
+2025-11-11 14:15:56,290 - INFO - Epoch 2/10 | Train Loss: 0.4272 | Val Loss: 0.8952 | Val Acc: 60.00%
+2025-11-11 14:16:01,595 - INFO - Epoch 3/10 | Train Loss: 0.2526 | Val Loss: 1.0512 | Val Acc: 60.00%
+2025-11-11 14:16:06,822 - INFO - Epoch 4/10 | Train Loss: 0.2248 | Val Loss: 1.1013 | Val Acc: 60.00%
+2025-11-11 14:16:13,145 - INFO - Epoch 5/10 | Train Loss: 0.1738 | Val Loss: 1.0989 | Val Acc: 60.00%
+2025-11-11 14:16:18,700 - INFO - Epoch 6/10 | Train Loss: 0.1142 | Val Loss: 0.8839 | Val Acc: 65.00%
+2025-11-11 14:16:24,215 - INFO - Epoch 7/10 | Train Loss: 0.1781 | Val Loss: 0.6753 | Val Acc: 75.00%
+2025-11-11 14:16:30,767 - INFO - Epoch 8/10 | Train Loss: 0.0486 | Val Loss: 0.5821 | Val Acc: 80.00%
+2025-11-11 14:16:36,185 - INFO - Epoch 9/10 | Train Loss: 0.0821 | Val Loss: 0.3068 | Val Acc: 85.00%
+2025-11-11 14:16:41,796 - INFO - Epoch 10/10 | Train Loss: 0.1680 | Val Loss: 0.2711 | Val Acc: 85.00%

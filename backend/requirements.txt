@@ -2,3 +2,4 @@ fastapi==0.104.1
 torch==2.6.0
 torchvision==0.21.0
 uvicorn==0.24.0
+Pillow==9.4.0

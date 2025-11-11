@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bone Cancer Detection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bone Cancer Detection</h1>
+        <p>Upload a bone scan image and get AI prediction!</p>
+
+        <div class="upload-section">
+            <input type="file" id="imageInput" accept="image/*">
+            <button id="predictBtn">Predict</button>
+        </div>
+
+        <div class="preview-section">
+            <img id="preview" src="" alt="Image Preview">
+        </div>
+
+        <div class="result-section">
+            <h2>Prediction Result:</h2>
+            <p id="predictionText">No prediction yet</p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

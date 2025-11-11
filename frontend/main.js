@@ -1,3 +1,5 @@
+const API_URL =
+  'https://bone-cancer-detection-232107405208.us-central1.run.app';
 const imageInput = document.getElementById('imageInput');
 const predictBtn = document.getElementById('predictBtn');
 const preview = document.getElementById('preview');
@@ -32,7 +34,7 @@ predictBtn.addEventListener('click', async () => {
   predictionText.textContent = 'Predicting...';
 
   try {
-    const response = await fetch('http://127.0.0.1:8000/predict', {
+    const response = await fetch(`${API_URL}/predict`, {
       method: 'POST',
       body: formData,
     });

@@ -52,11 +52,14 @@ filename,cancer,normal
 - Epochs: 10  
 
 **Training Result:** 
+
 ![plot](/model/static/training_history.png)
 
 **Confusion Matrix:** 
+
 ![plot](/model/static/confusion_matrix.png)
 
 **ROC Curve:** 
+
 ![plot](/model/static/roc_curve.png)
 

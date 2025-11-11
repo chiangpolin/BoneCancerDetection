@@ -56,7 +56,7 @@ class BoneScanDataset(Dataset):
             image = self.transform(image)
         return image, label
 
-# ========== Transforms + DataLoader ==========
+# Transforms + DataLoader
 train_tfms = transforms.Compose([
     transforms.Resize((IMG_SIZE, IMG_SIZE)),
     transforms.RandomHorizontalFlip(),
@@ -82,7 +82,7 @@ test_loader  = DataLoader(test_dataset,  batch_size=BATCH_SIZE, shuffle=False)
 
 logger.info(f"Train: {len(train_dataset)} | Valid: {len(valid_dataset)} | Test: {len(test_dataset)}")
 
-# ========== Model ==========
+# Model
 model = models.resnet18(weights=None)
 model.fc = nn.Linear(model.fc.in_features, 2)  # 2 classes: cancer / normal
 model = model.to(DEVICE)
@@ -90,7 +90,7 @@ model = model.to(DEVICE)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=LR)
 
-# ========== Training Loop ==========
+# Training Loop
 train_losses, valid_losses, train_accs, valid_accs = [], [], [], []
 
 for epoch in range(EPOCHS):
@@ -143,11 +143,11 @@ plt.title('Accuracy')
 plt.legend()
 plt.savefig(f"{OUTPUT_DIR}/training_history.png")
 
-# ========== Save model ==========
+# Save model
 torch.save(model.state_dict(), MODEL_PATH)
 print("Model saved as model.pth")
 
-# ========== Testing + Evaluation ==========
+# Testing + Evaluation
 model.eval()
 all_labels, all_preds, all_probs = [], [], []
 

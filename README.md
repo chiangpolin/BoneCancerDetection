@@ -1,4 +1,5 @@
 # BoneScanClassifier
+Visit [Website](https://scan.chiangpolin.com/)
 
 ## Method
 BoneScanClassifier is a deep learning-based image classification model designed to detect bone cancer from X-ray images.  
@@ -8,7 +9,7 @@ BoneScanClassifier is a deep learning-based image classification model designed 
 - For deployment, the trained model can be served via **FastAPI** for API-based inference.
 
 ## Dataset
-- Source: [Bone Cancer Detection Dataset on Kaggle](https://www.kaggle.com/datasets/ziya07/bone-cancer-detection-dataset)  
+- Source: https://www.kaggle.com/datasets/ziya07/bone-cancer-detection-dataset
 - Contains **8,811 X-ray images** labeled for bone cancer detection.  
 - The dataset is split into **train, test, and validation** subsets.  
 
@@ -47,5 +48,15 @@ filename,cancer,normal
 **Training settings:**  
 - Loss: Cross-Entropy Loss  
 - Optimizer: Adam  
-- Batch size: 32  
-- Epochs: 50  
+- Batch size: 16  
+- Epochs: 10  
+
+**Training Result:** 
+![plot](/model/static/training_history.png)
+
+**Confusion Matrix:** 
+![plot](/model/static/confusion_matrix.png)
+
+**ROC Curve:** 
+![plot](/model/static/roc_curve.png)
+

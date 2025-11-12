@@ -1,6 +1,7 @@
 python-multipart==0.0.20
 fastapi==0.70.0
 uvicorn==0.15.0
+numpy==1.26.4
 torch==2.2.2
 torchvision==0.17.2
 Pillow==9.4.0

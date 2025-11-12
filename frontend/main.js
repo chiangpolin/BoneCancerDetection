@@ -1,5 +1,4 @@
-const API_URL =
-  'https://bone-cancer-detection-232107405208.us-central1.run.app';
+const API_URL = 'https://bone-cancer-detection-232107405208.asia-east1.run.app';
 const imageInput = document.getElementById('imageInput');
 const predictBtn = document.getElementById('predictBtn');
 const preview = document.getElementById('preview');
